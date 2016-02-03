@@ -1,0 +1,218 @@
+@import "mixin.less";
+
+body {
+  padding-top: 70px;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+
+  nav {
+    .navbar.navbar-default.navbar-fixed-top {
+      margin-bottom: 0;
+    }
+
+    .navbar-default {
+      background: #ffffff;
+    }
+
+    .navbar-brand {
+      max-height: 50px;
+    }
+
+    .nav.navbar-nav li a {
+      .positionCentering;
+      margin-right: 10px;
+    }
+
+    ul.navbar-nav {
+      border: 1px solid rgba(221, 221, 221, 0);
+    }
+  }
+
+  .back-background {
+    width: 100%;
+    min-height: 100%;
+    background-image: url(img/black-background.jpg);
+    background-attachment: fixed;
+
+    .black-banner {
+      .displayCentering;
+      min-height: 300px;
+      font-size: 25px;
+    }
+
+    .banner {
+      display: inline-block;
+      width: 250px;
+      height: 50px;
+      border-radius: 5px 50px 5px;
+      background-color: rgba(191, 31, 197, 1) ;
+      text-align: center;
+      line-height: 50px;
+      color: #fff;
+      animation:
+        nudge 5s linear infinite ;
+      animation-iteration-count: 5;
+
+      -webkit-animation:
+        nudge 5s linear infinite;
+      -webkit-animation-iteration-count: 5;
+
+      -moz-animation:
+        nudge 5s linear infinite ;
+      -moz-animation-iteration-count: 5;
+
+      &.even {
+        animation:
+          stretch 2.5s linear infinite;
+        animation-iteration-count: 5;
+
+        -webkit-animation:
+          stretch 2.5s linear infinite;
+        -webkit-animation-iteration-count: 5;
+
+        -moz-animation:
+          stretch 2.5s linear infinite;
+        -moz-animation-iteration-count: 5;
+      }
+
+
+    }
+
+    #skills .banner {
+      background-color: rgba(39, 239, 231, 1);
+    }
+
+    @keyframes stretch {
+      .stretching;
+    }
+
+    @keyframes nudge {
+      .nudging;
+    }
+
+    .alt-content {
+      background-color: white;
+      min-height: 350px;
+      padding: 20px;
+    }
+    .portfolio-links li {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .contacts {
+      background-color: rgba(42, 45, 46, 1.0);
+      min-height: 350px;
+      color: #fff;
+
+      ul {
+        list-style: none;
+        -webkit-padding-start: 0;
+      }
+
+      li {
+        margin: 0 0 10px;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(235, 239, 242, 1.0);
+      }
+
+      .info {
+        color: rgba(220, 224, 227, 0.8);
+      }
+
+      .fa {
+        margin-right: 20px;
+      }
+    }
+
+  }
+  .portfolio-links .fa {
+    color: #000000;
+
+  }
+
+  .skills li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .skills img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+
+  img[src*="resume"] {
+    display: block;
+    margin: 50px auto;
+  }
+
+  footer {
+    background-color: #0f0f0f;
+    height: 50px;
+    color: rgba(237, 234, 230, 0.5);
+    .displayCentering;
+  }
+
+  #map {
+    margin: 30px;
+    height: 300px;
+    width: 400px;
+  }
+
+  @media all and (max-width: 915px)  {
+    #map {
+      width: 300px;
+    }
+  }
+
+  @media all and (max-width: 767px)  {
+    .navbar-fixed-top {
+      height: 70px;
+    }
+
+    ul.navbar-nav{
+      border: 1px solid rgba(221, 221, 221, 1);
+      background-color: rgba(221, 221, 221, 1);
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    nav .nav.navbar-nav li a {
+      margin-right: 0;
+    }
+
+    .alt-content {
+      height: 200px;
+    }
+
+    .skills img {
+      width: 70px;
+      height: 70px;
+      margin: 5px;
+    }
+
+    #map {
+      width: 400px;
+    }
+  }
+
+
+
+  @media all and (max-width: 590px)  {
+    @keyframes nudge {
+      .nudging;
+    }
+  }
+
+  @media all and (max-width: 470px)  {
+    #map {
+      width: 300px;
+    }
+  }
+}
+

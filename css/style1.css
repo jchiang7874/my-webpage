@@ -1,0 +1,263 @@
+@import "less/mixin.less";
+
+body {
+  padding-top: 70px;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+body nav .navbar.navbar-default.navbar-fixed-top {
+  margin-bottom: 0;
+}
+body nav .navbar-default {
+  background: #ffffff;
+}
+body nav .navbar-brand {
+  max-height: 50px;
+}
+body nav .nav.navbar-nav li a {
+  position: relative;
+  top: 50%;
+  transform: translateY(-25%);
+  margin-right: 10px;
+}
+body nav ul.navbar-nav {
+  border: 1px solid rgba(221, 221, 221, 0);
+}
+body .back-background {
+  width: 100%;
+  min-height: 100%;
+  background-image: url(../img/black-background.jpg);
+  background-attachment: fixed;
+}
+body .back-background .black-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: 25px;
+}
+
+body .back-background .alt-content {
+  background-color: white;
+  min-height: 350px;
+  padding: 20px;
+}
+body .back-background .portfolio-links li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+body .back-background .contacts {
+  background-color: #2a2d2e;
+  min-height: 350px;
+  color: #fff;
+}
+body .back-background .contacts ul {
+  list-style: none;
+  -webkit-padding-start: 0;
+}
+body .back-background .contacts li {
+  margin: 0 0 10px;
+}
+body .back-background .contacts .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ebeff2;
+}
+body .back-background .contacts .info {
+  color: rgba(220, 224, 227, 0.8);
+}
+body .back-background .contacts .fa {
+  margin-right: 20px;
+}
+
+body .portfolio-links .fa {
+  color: #000000;
+  margin-right: 20px;
+}
+body .skills li {
+  list-style: none;
+  display: inline-block;
+}
+body .skills img {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+body #resume-doc {
+    text-align: center;
+}
+body img[src*="resume"] {
+  display: block;
+  margin: 50px auto;
+}
+body #wordSlide {
+    color: #ff7e33;
+    text-shadow: 2px 0px rgb(143, 88, 3);
+}
+body footer {
+  background-color: #0f0f0f;
+  height: 50px;
+  color: rgba(237, 234, 230, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #map {
+  margin: 30px;
+  height: 300px;
+  width: 400px;
+}
+
+
+/******************************** Animation ****************************************/
+
+
+.positionCentering {
+    position: relative;
+    top: 50%;
+    transform: translateY(-25%);
+}
+.displayCentering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nudging 0%,
+.nudging 100% {
+    transform: translate(0, 0);
+}
+.nudging 50% {
+    transform: translate(200px, 70px);
+}
+.nudging 80% {
+    transform: translate(-200px, 70px);
+}
+.stretching 0% {
+    transform: scale(1);
+}
+.stretching 30% {
+    transform: scaleX(1.25) scaleY(0.75);
+}
+.stretching 40% {
+    transform: scaleX(0.75) scaleY(1.25);
+}
+.stretching 60% {
+    transform: scaleX(1.15) scaleY(0.85);
+}
+.stretching 100% {
+    transform: scale(1);
+}
+
+body .back-background .banner {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px 50px 5px;
+    background-color: #bf1fc5;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    animation: nudge 5s linear infinite ;
+    animation-iteration-count: 5;
+    -webkit-animation: nudge 5s linear infinite;
+    -webkit-animation-iteration-count: 5;
+    -moz-animation: nudge 5s linear infinite ;
+    -moz-animation-iteration-count: 5;
+}
+body .back-background .banner.even {
+    animation: stretch 2.5s linear infinite;
+    animation-iteration-count: 5;
+    -webkit-animation: stretch 2.5s linear infinite;
+    -webkit-animation-iteration-count: 5;
+    -moz-animation: stretch 2.5s linear infinite;
+    -moz-animation-iteration-count: 5;
+}
+body .back-background #skills .banner {
+    background-color: #27efe7;
+}
+@keyframes stretch {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scaleX(1.25) scaleY(0.75);
+    }
+    40% {
+        transform: scaleX(0.75) scaleY(1.25);
+    }
+    60% {
+        transform: scaleX(1.15) scaleY(0.85);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes nudge {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(200px, 70px);
+    }
+    80% {
+        transform: translate(-200px, 70px);
+    }
+}
+
+
+@media all and (max-width: 590px) {
+  @keyframes nudge {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(200px, 70px);
+    }
+    80% {
+      transform: translate(-200px, 70px);
+    }
+  }
+}
+
+
+/****************** media query ***********************/
+
+@media all and (max-width: 470px) {
+  body #map {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 915px) {
+    body #map {
+        width: 300px;
+    }
+}
+@media all and (max-width: 767px) {
+    body .navbar-fixed-top {
+        height: 70px;
+    }
+    body ul.navbar-nav {
+        border: 1px solid #dddddd;
+        background-color: #dddddd;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    body nav .nav.navbar-nav li a {
+        margin-right: 0;
+    }
+    body .alt-content {
+        height: 200px;
+    }
+    body .skills img {
+        width: 70px;
+        height: 70px;
+        margin: 5px;
+    }
+    body #map {
+        width: 400px;
+    }
+}
+
