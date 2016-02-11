@@ -31,6 +31,7 @@ function initMap() {
 }
 
 function slideShow() {
+/*
     var str, index = 0, result = ["is curious"], elem = document.getElementById('wordSlide');
      $.ajax({
          type: 'GET',
@@ -40,6 +41,9 @@ function slideShow() {
          result = str.split('; ');
         }
      });
+*/
+
+var elem = document.getElementById('wordSlide'), index = 0, result = ['is curious', 'enjoys sarcastic humor', 'secretly wishes for Christmas everyday', 'prefers beer over cocktails', 'loves to work', 'works to travel', 'travels to eat', 'is terrible at cooking but', 'makes a mean bowl of ramen'];
 
     function nextWord(){
         index++;

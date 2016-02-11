@@ -42,6 +42,13 @@ body .back-background .alt-content {
   min-height: 350px;
   padding: 20px;
 }
+
+body .details #git-link {
+  margin: 20px 0 20px;
+}
+body .details #linkedin-link {
+  margin: 40px 0;
+}
 body .back-background .portfolio-links li {
   list-style: none;
   margin-bottom: 20px;
@@ -79,8 +86,8 @@ body .skills li {
   display: inline-block;
 }
 body .skills img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin: 20px;
 }
 body #resume-doc {
