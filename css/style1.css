@@ -84,11 +84,15 @@ body .portfolio-links .fa {
 body .skills li {
   list-style: none;
   display: inline-block;
+  padding: 5px;
 }
 body .skills img {
   width: 90px;
   height: 90px;
   margin: 20px;
+}
+body h4 {
+  padding: 5px;
 }
 body #resume-doc {
     text-align: center;
@@ -231,18 +235,7 @@ body .back-background #skills .banner {
 
 /****************** media query ***********************/
 
-@media all and (max-width: 470px) {
-  body #map {
-    width: 300px;
-  }
-}
-
-@media all and (max-width: 915px) {
-    body #map {
-        width: 300px;
-    }
-}
-@media all and (max-width: 767px) {
+@media all and (max-width: 399px) {
     body .navbar-fixed-top {
         height: 70px;
     }
@@ -255,16 +248,19 @@ body .back-background #skills .banner {
     body nav .nav.navbar-nav li a {
         margin-right: 0;
     }
+    body .details {
+      height: 450px;
+    }
     body .alt-content {
         height: 200px;
     }
     body .skills img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         margin: 5px;
     }
     body #map {
-        width: 400px;
+        width: 300px;
     }
 }
 
